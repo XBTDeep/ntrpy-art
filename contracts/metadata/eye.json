@@ -1,0 +1,13 @@
+{
+  "name": "NTRPY — Chapter I",
+  "description": "3,333 identical eyes.\n\nChapter I is LARVA: you arrive as what your environment made you. Nothing is rolled at mint, nothing is luckier than anything else. What distinguishes one specimen from another is only ever what its holder does with it.\n\nRarity is earned, not drawn.\n\n\"You go blind right before you see clearly.\"\n\nntrpy.ai — the turning within",
+  "external_url": "https://ntrpy.ai",
+  "image": "ar://REPLACE_WITH_EYE_POSTER_TX",
+  "animation_url": "ar://REPLACE_WITH_EYE_MP4_TX",
+  "background_color": "000000",
+  "attributes": [
+    { "trait_type": "Chapter", "value": "I — Larva" },
+    { "trait_type": "State", "value": "Order, inherited" },
+    { "trait_type": "Mechanism", "value": "Undifferentiated" }
+  ]
+}
