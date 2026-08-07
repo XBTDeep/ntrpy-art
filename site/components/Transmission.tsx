@@ -13,14 +13,14 @@ export default function Transmission() {
       <div className="transmission-inner">
         <Reveal>
           <p className="transmission-quote chrome-text">
-            “One must still have chaos in oneself
+            “<em>Thou shalt</em> is the great dragon.
             <br />
-            to give birth to a dancing star.”
+            But the spirit of the lion says: <em>I will.</em>”
           </p>
         </Reveal>
         <Reveal delay={0.15}>
           <p className="mono" style={{ marginTop: "1.8rem" }}>
-            nietzsche · thus spoke zarathustra
+            nietzsche · on the three metamorphoses
           </p>
         </Reveal>
       </div>
