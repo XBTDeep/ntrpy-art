@@ -13,14 +13,14 @@ export default function Transmission() {
       <div className="transmission-inner">
         <Reveal>
           <p className="transmission-quote chrome-text">
-            “<em>Thou shalt</em> is the great dragon.
+            “You go blind
             <br />
-            But the spirit of the lion says: <em>I will.</em>”
+            right before you see clearly.”
           </p>
         </Reveal>
         <Reveal delay={0.15}>
           <p className="mono" style={{ marginTop: "1.8rem" }}>
-            nietzsche · on the three metamorphoses
+            ntrpy · the turning within
           </p>
         </Reveal>
       </div>
