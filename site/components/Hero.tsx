@@ -20,14 +20,10 @@ export default function Hero() {
   return (
     <header className="hero" onMouseMove={onMove} id="top">
       <div className="hero-halo" aria-hidden="true" />
+      {/* slow iridescent bloom turning behind the logo */}
+      <div className="hero-bloom" aria-hidden="true" />
       {/* imaginal dust drifting in the void */}
       <VoidField />
-      {/* the flap — ripples propagating from the logo's orbit */}
-      <div className="hero-ripples" aria-hidden="true">
-        <span />
-        <span />
-        <span />
-      </div>
 
       <div className="hero-corner tl">
         N 43.6532° <br /> W 79.3832°
@@ -54,6 +50,16 @@ export default function Hero() {
           alt="NTRPY"
           draggable={false}
         />
+        {/* chrome catching light — y2k lens glints on the letterforms */}
+        <span className="glint g1" aria-hidden="true" />
+        <span className="glint g2" aria-hidden="true" />
+        <span className="glint g3" aria-hidden="true" />
+        <span className="glint g4" aria-hidden="true" />
+        <span className="glint g5" aria-hidden="true" />
+        <span className="glint g6" aria-hidden="true" />
+        <span className="glint g7" aria-hidden="true" />
+        <span className="glint g8" aria-hidden="true" />
+        <span className="glint g9" aria-hidden="true" />
       </motion.div>
 
       <motion.div
