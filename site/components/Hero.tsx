@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion } from "framer-motion";
+import VoidField from "./VoidField";
 
 export default function Hero() {
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -19,8 +20,14 @@ export default function Hero() {
   return (
     <header className="hero" onMouseMove={onMove} id="top">
       <div className="hero-halo" aria-hidden="true" />
-      {/* searchlight beam projecting the logo onto the void */}
-      <div className="hero-beam" aria-hidden="true" />
+      {/* imaginal dust drifting in the void */}
+      <VoidField />
+      {/* the flap — ripples propagating from the logo's orbit */}
+      <div className="hero-ripples" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
 
       <div className="hero-corner tl">
         N 43.6532° <br /> W 79.3832°

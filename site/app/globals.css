@@ -253,64 +253,62 @@ button {
   50% { opacity: 1; transform: scale(1.06); }
 }
 
-/* ---- the signal: volumetric searchlight aimed at the logo ---- */
+/* ---- imaginal dust — particle field across the hero void ---- */
 
-.hero-beam {
+.void-field {
   position: absolute;
-  right: -10vmax;
-  bottom: -14vmax;
-  width: 130vmax;
-  height: 50vmin;
-  /* pivot at the source: the bottom-right corner */
-  transform-origin: 100% 50%;
-  transform: rotate(28deg);
+  inset: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   opacity: 0;
-  animation:
-    beam-in 2.4s 2.2s var(--ease-out) forwards,
-    beam-sway 11s 2.2s ease-in-out infinite;
+  animation: beam-in 2.5s 2s var(--ease-out) forwards;
 }
 
-/* outer haze — wide soft cone, narrow at source (right), open toward logo */
-.hero-beam::before {
-  content: "";
+/* ---- the flap — chrome ripples propagating from the logo's orbit ---- */
+
+.hero-ripples {
   position: absolute;
-  inset: 0;
-  clip-path: polygon(100% 42%, 100% 58%, 0% 100%, 0% 0%);
-  background: linear-gradient(
-    270deg,
-    rgba(150, 175, 220, 0.30),
-    rgba(150, 175, 220, 0.10) 55%,
-    rgba(150, 175, 220, 0) 85%
-  );
-  filter: blur(34px);
-  mix-blend-mode: screen;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -54%);
+  width: min(760px, 88vw);
+  aspect-ratio: 1.55;
+  pointer-events: none;
+  opacity: 0;
+  animation: beam-in 2s 2.4s var(--ease-out) forwards;
 }
 
-/* inner core — the bright shaft */
-.hero-beam::after {
-  content: "";
+.hero-ripples span {
   position: absolute;
   inset: 0;
-  clip-path: polygon(100% 47%, 100% 53%, 0% 74%, 0% 26%);
-  background: linear-gradient(
-    270deg,
-    rgba(214, 228, 255, 0.34),
-    rgba(214, 228, 255, 0.10) 58%,
-    rgba(214, 228, 255, 0) 82%
-  );
-  filter: blur(14px);
-  mix-blend-mode: screen;
+  border-radius: 50%;
+  border: 1px solid rgba(190, 204, 228, 0.5);
+  box-shadow:
+    0 0 18px rgba(160, 178, 210, 0.12),
+    inset 0 0 18px rgba(160, 178, 210, 0.1);
+  animation: ripple-out 5.4s cubic-bezier(0.2, 0.6, 0.35, 1) infinite;
+}
+
+.hero-ripples span:nth-child(2) { animation-delay: 1.8s; }
+.hero-ripples span:nth-child(3) { animation-delay: 3.6s; }
+
+@keyframes ripple-out {
+  0% {
+    transform: scale(0.72);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(2.15);
+    opacity: 0;
+  }
 }
 
 @keyframes beam-in {
   to { opacity: 1; }
-}
-
-/* slow sweep, like the operator is holding it on target */
-@keyframes beam-sway {
-  0%, 100% { transform: rotate(26.8deg); }
-  50% { transform: rotate(29deg); }
 }
 
 .hero-logo-wrap {
