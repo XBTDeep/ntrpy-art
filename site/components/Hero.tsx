@@ -19,6 +19,8 @@ export default function Hero() {
   return (
     <header className="hero" onMouseMove={onMove} id="top">
       <div className="hero-halo" aria-hidden="true" />
+      {/* searchlight beam projecting the logo onto the void */}
+      <div className="hero-beam" aria-hidden="true" />
 
       <div className="hero-corner tl">
         N 43.6532° <br /> W 79.3832°
