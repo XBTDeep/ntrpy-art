@@ -287,7 +287,7 @@ button {
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
   mask-mode: luminance;
-  animation: shine-sweep 5.5s var(--ease-out) infinite;
+  animation: shine-sweep 2.75s var(--ease-out) infinite;
   pointer-events: none;
 }
 
