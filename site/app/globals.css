@@ -312,33 +312,33 @@ button {
   );
   opacity: 0;
   transform: scale(0.2) rotate(0deg);
-  animation: glint-pop 7s ease-in-out infinite;
+  animation: glint-pop 7s ease-in-out 2.6s infinite;
   pointer-events: none;
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
 }
 
+/* slow bloom: ~4s of glow per star — swell, linger, dissolve */
 @keyframes glint-pop {
-  0%, 12%, 100% {
+  0%, 100% {
     opacity: 0;
     transform: scale(0.2) rotate(0deg);
   }
-  5% {
+  12% {
     opacity: 1;
-    transform: scale(1) rotate(45deg);
+    transform: scale(1) rotate(28deg);
+  }
+  24% {
+    opacity: 0.85;
+    transform: scale(0.94) rotate(45deg);
+  }
+  36% {
+    opacity: 0;
+    transform: scale(0.25) rotate(60deg);
   }
 }
 
-/* placed on the logo's hot points: apex of the N, tip of the Y,
-   ellipse edges — staggered so one pops every ~0.8s */
-.glint.g1 { top: 9%; left: 31%; animation-delay: 2.6s; }
-.glint.g2 { top: 15%; left: 74%; width: 22px; height: 22px; animation-delay: 3.4s; }
-.glint.g3 { top: 47%; left: 5%; width: 20px; height: 20px; animation-delay: 4.2s; }
-.glint.g4 { top: 83%; left: 45%; width: 26px; height: 26px; animation-delay: 5s; }
-.glint.g5 { top: 30%; left: 56%; width: 18px; height: 18px; animation-delay: 5.8s; }
-.glint.g6 { top: 68%; left: 90%; width: 24px; height: 24px; animation-delay: 6.6s; }
-.glint.g7 { top: 22%; left: 14%; width: 16px; height: 16px; animation-delay: 7.4s; }
-.glint.g8 { top: 90%; left: 22%; width: 18px; height: 18px; animation-delay: 8.2s; }
-.glint.g9 { top: 55%; left: 68%; width: 20px; height: 20px; animation-delay: 9s; }
+/* positions come from the GLINTS table in Hero.tsx;
+   no per-glint delay — the whole constellation flashes as one */
 
 @keyframes beam-in {
   to { opacity: 1; }
